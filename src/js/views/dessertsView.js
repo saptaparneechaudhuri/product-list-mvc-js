@@ -125,19 +125,19 @@ class DessertsView {
 
   _generateMarkup() {
     // console.log(this._data);
-    return this._data
-      .map((item, index) => this._generateMarkupPreview(item, index))
-      .join("");
-
     // return this._data
-    //   .map((item) => {
-    //     if (item.number > 0) {
-    //       return this._generateMarkupSelected(item);
-    //     } else {
-    //       return this._generateMarkupPreview(item);
-    //     }
-    //   })
+    //   .map((item, index) => this._generateMarkupPreview(item, index))
     //   .join("");
+
+    return this._data
+      .map((item) => {
+        if (item.number > 0) {
+          return this._generateMarkupSelected(item);
+        } else {
+          return this._generateMarkupPreview(item);
+        }
+      })
+      .join("");
   }
 
   _generateMarkupPreview(item) {
