@@ -1137,11 +1137,11 @@ class DessertsView {
             </div>
 
             <div class="bg-rosey-100">
-              <p class="text-rosey-300 text-xs">${item.name}</p>
-              <p class="text-sm text-rosey-900 font-medium">
+              <p class="text-rosey-300 md:text-xs text-lg">${item.name}</p>
+              <p class="md:text-sm text-lg text-rosey-900 font-medium">
                 ${item.title}
               </p>
-              <p class="text-primary-red text-base font-medium">$${item.price}</p>
+              <p class="text-primary-red md:text-base text-lg font-medium">$${item.price}</p>
             </div>
           </div>
         </div>

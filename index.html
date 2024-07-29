@@ -18,13 +18,16 @@
   <body class="bg-rosey-100" id="root">
     <main
       id="main-container"
-      class="md:container mx-auto py-16 2xl:container-large flex justify-between gap-4"
+      class="max-w-fit md:container mx-auto py-16 2xl:container-large md:flex md:justify-between md:gap-4"
     >
-      <section class="text-primary-red basis-3/4">
+      <section class="text-primary-red md:basis-3/4 mb-8">
         <h1 class="text-rosey-900 font-bold text-4xl mb-8">Desserts</h1>
-        <div class="grid grid-cols-img-grid gap-6" id="recipe-container"></div>
+        <div
+          class="md:grid md:grid-cols-img-grid md:gap-6"
+          id="recipe-container"
+        ></div>
       </section>
-      <section class="bg-rosey-50 basis-1/4 rounded-lg p-6 h-fit">
+      <section class="bg-rosey-50 md:basis-1/4 rounded-lg p-6 h-fit">
         <div id="cart"></div>
       </section>
     </main>
