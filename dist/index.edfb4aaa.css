@@ -264,6 +264,14 @@ img, video {
 
 .blur-bg {
   filter: blur(2px);
+  opacity: .5;
+  z-index: 2;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  inset: 0;
 }
 
 .absolute {
@@ -473,6 +481,11 @@ img, video {
   text-align: center;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -496,16 +509,6 @@ img, video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: .75rem;
-  line-height: 1rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -797,14 +800,14 @@ body {
     line-height: 1.25rem;
   }
 
-  .md\:text-xs {
-    font-size: .75rem;
-    line-height: 1rem;
-  }
-
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
   }
 }
 /*# sourceMappingURL=index.edfb4aaa.css.map */
