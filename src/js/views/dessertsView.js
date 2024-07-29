@@ -125,19 +125,19 @@ class DessertsView {
 
   _generateMarkup() {
     // console.log(this._data);
-    // return this._data
-    //   .map((item, index) => this._generateMarkupPreview(item, index))
-    //   .join("");
-
     return this._data
-      .map((item) => {
-        if (item.number > 0) {
-          return this._generateMarkupSelected(item);
-        } else {
-          return this._generateMarkupPreview(item);
-        }
-      })
+      .map((item, index) => this._generateMarkupPreview(item, index))
       .join("");
+
+    // return this._data
+    //   .map((item) => {
+    //     if (item.number > 0) {
+    //       return this._generateMarkupSelected(item);
+    //     } else {
+    //       return this._generateMarkupPreview(item);
+    //     }
+    //   })
+    //   .join("");
   }
 
   _generateMarkupPreview(item) {
@@ -183,11 +183,11 @@ class DessertsView {
             </div>
 
             <div class="bg-rosey-100">
-              <p class="text-rosey-300 text-xs">${item.name}</p>
-              <p class="text-sm text-rosey-900 font-medium">
+              <p class="text-rosey-300 md:text-xs text-lg">${item.name}</p>
+              <p class="md:text-sm text-lg text-rosey-900 font-medium">
                 ${item.title}
               </p>
-              <p class="text-primary-red text-base font-medium">$${
+              <p class="text-primary-red md:text-base text-xl font-medium">$${
                 item.price
               }</p>
             </div>

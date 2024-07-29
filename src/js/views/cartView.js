@@ -86,7 +86,7 @@ class CartView {
   _renderEmptyCart() {
     return `
     <div>
-     <h1 class="text-primary-red font-bold text-xl mb-8">
+     <h1 class="text-primary-red font-bold md:text-xl text-2xl mb-8">
           Your Cart <span>(${this._totalItems})</span>
         </h1>
      <div class="mx-auto text-center empty-cart">
@@ -107,7 +107,7 @@ class CartView {
   _renderCart() {
     return `
         <div>
-            <h1 class="text-primary-red font-bold text-xl mb-8">
+            <h1 class="text-primary-red font-bold md:text-xl text-2xl mb-8">
           Your Cart <span>(${this._totalItems})</span>
         </h1>
        
@@ -123,7 +123,7 @@ class CartView {
         }
          </div>
          <div class="flex justify-between mt-5 mb-5 order-total">
-         <span class="text-rosey-500 font-medium text-base"
+         <span class="text-rosey-500 font-medium md:text-base text-lg"
               >Order Total</span
             >
             <span class="text-rosey-900 font-bold text-lg">$${this._totalPrice.toFixed(
@@ -157,16 +157,18 @@ class CartView {
             } data-item=${item.itemId}
           >
             <div>
-              <h2 class="text-rosey-900 font-medium mb-2">${item.name}</h2>
+              <h2 class="text-rosey-900 font-medium mb-2 text-lg sm:text-base">${
+                item.name
+              }</h2>
               <div>
-                <span class="text-primary-red font-medium text-base mr-2"
+                <span class="text-primary-red font-medium md:text-base text-lg mr-2"
                   >${item.number}x</span
                 >
-                <span class="text-rosey-400 text-sm mr-1">
-                  <span class="text-sm">@</span>
+                <span class="text-rosey-400 md:text-sm text-base mr-1">
+                  <span class="md:text-sm text-base">@</span>
                   <span>$${(+item.price).toFixed(2)}</span>
                 </span>
-                <span class="text-rosey-500 font-semibold text-sm">${(
+                <span class="text-rosey-500 font-semibold md:text-sm text-base">${(
                   +item.number * +item.price
                 ).toFixed(2)}</span>
               </div>
